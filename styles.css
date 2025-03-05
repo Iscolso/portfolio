@@ -1,5 +1,6 @@
 /*Reset basico para eliminar imagenes y mejorar compatibilidad*/
 /*Paleta de colores*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 :root{
     --navy-blue: #001f3f;
@@ -18,18 +19,17 @@
 /*estilo general*/
 
 body{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Poppins', Times, serif;
     background: linear-gradient(to bottom, var(--navy-blue), var(--light-blue));
-    color: var(rgb(189,189,189));
-    padding:0;
-    margin: 0;
+    color: rgb(189,189,189);
     text-align: center;
     min-height: 100vh;
-    
+    padding:0;
+    margin: 0;
 }
 
 header{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Poppins', Times, serif;
     background: var(--navy-blue);
     color: azure;
     padding: 20px;
@@ -37,16 +37,19 @@ header{
     gap: 20px;
 }
 
-nav ul li{
-    list-style:none;
-    display: inline;
+nav ul{
+    display: flex;
     justify-content: center;
     gap: 30px;
+    padding:0;
+}
+
+nav ul li {
+    list-style: none;
 }
 
 nav ul li a{
     color: var(--white);
-    gap: 20px;
     text-decoration: none;
     font-weight: bold;
 
@@ -54,10 +57,18 @@ nav ul li a{
 
 /*sections*/
 section{
-    padding:80 20px;
+    background:  rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding:30px;
     margin: 50px 0;
     text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
+
+section:hover{
+    transform: scale(1.02);
+}
+
 h2{
     color: rgb(189,189,189);
 }
@@ -83,15 +94,16 @@ h2{
     color: var(--navy-blue);
     padding: 10px;
     border-radius: 5px;
+    cursor:pointer;
     font-size: 16px;
     width: 250px;
     text-align: center;
 }
 
 .copy-container button {
-    background: var(--vinotinto);
+    background: var(--redwine);
     color: var(--white);
-    border: none;
+    border:black;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -100,4 +112,22 @@ h2{
 
 .copy-container button:hover {
     background: #a83232; /* Un rojo más claro al pasar el mouse */
+}
+
+#presentation {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+    margin-top: 50px;
+}
+
+.cursor {
+    display: inline-block;
+    color: var(--light-blue);
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink{
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0; }
 }
