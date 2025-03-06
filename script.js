@@ -7,7 +7,7 @@ function copiarCorreo(){
 
 document.addEventListener("DOMContentLoaded", function(){
     const textElement = document.getElementById("typing-text");
-    const text = "A developer and an engineering student.";
+    const text = "a developer and an engineering student.";
     let index = 0;
 
     function type(){
