@@ -99,6 +99,47 @@ div{
     border-radius: 10px;
 }
 
+.project{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 500px;
+    transition: tranform 0.3 ease-in-out, box-shadow 0.3 ease-in-out;
+}
+
+.project:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+
+.project-image {
+    width: 70%;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-image:hover {
+    opacity: 0.8;
+}
+
+.button{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #b22222;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+    background: #8b1a1a;
+}
+
 .linkedin-link{
     border-radius: 3px;
     border-color: #800020;
